@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recorder", "Recorder\Recorder.csproj", "{219408B0-3CFC-4BB7-8166-320B98F2866F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAudio", "NAudio\NAudio.csproj", "{523D929F-47F1-4578-B6AE-FBFA4076435C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{219408B0-3CFC-4BB7-8166-320B98F2866F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{523D929F-47F1-4578-B6AE-FBFA4076435C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523D929F-47F1-4578-B6AE-FBFA4076435C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523D929F-47F1-4578-B6AE-FBFA4076435C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523D929F-47F1-4578-B6AE-FBFA4076435C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

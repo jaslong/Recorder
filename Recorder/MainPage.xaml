@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="VoiceRecorder.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:local="clr-namespace:VoiceRecorder"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <controls:Panorama x:Name="PanoramaControl">
+        <controls:Panorama.TitleTemplate>
+            <DataTemplate/>
+        </controls:Panorama.TitleTemplate>
+        <controls:PanoramaItem Header="Record">
+            <StackPanel x:Name="RecordPanel">
+                <Button x:Name="RecordButton" Content="Start Recording" Height="400" Click="Button_Click"/>
+                <StackPanel x:Name="SavePanel" Visibility="Collapsed">
+                    <TextBlock Text="Give your recording a name."/>
+                    <TextBox x:Name="FileNameTextBox" KeyDown="FileNameTextBox_KeyDown">
+                        <TextBox.InputScope>
+                            <InputScope>
+                                <InputScopeName NameValue="FullFilePath"/>
+                            </InputScope>
+                        </TextBox.InputScope>
+                    </TextBox>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Content="Save" Click="SaveRecording"/>
+                        <Button Grid.Column="1" Content="Don't Save" Click="DiscardRecording"/>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </controls:PanoramaItem>
+        <controls:PanoramaItem Header="Recordings">
+            <StackPanel>
+                <TextBlock Text="Tap to play, hold to delete."/>
+                <ListBox x:Name="RecordingsListBox" ItemsSource="{Binding}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432" Height="78" Tap="StackPanel_Tap" Hold="StackPanel_Hold">
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </controls:PanoramaItem>
+    </controls:Panorama>
+</phone:PhoneApplicationPage>

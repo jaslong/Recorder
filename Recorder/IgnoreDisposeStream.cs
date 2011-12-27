@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace VoiceRecorder
+namespace Recorder
 {
     class IgnoreDisposeStream : Stream
     {

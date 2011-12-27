@@ -4,7 +4,7 @@ using System.IO.IsolatedStorage;
 
 using NAudio.Wave;
 
-namespace VoiceRecorder
+namespace Recorder
 {
     class Recorder : IDisposable
     {

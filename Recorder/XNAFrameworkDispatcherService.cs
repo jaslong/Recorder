@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Threading;
 using Microsoft.Xna.Framework;
 
-namespace VoiceRecorder
+namespace Recorder
 {
     public class XNAFrameworkDispatcherService : IApplicationService
     {

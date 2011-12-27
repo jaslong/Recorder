@@ -2,7 +2,7 @@
 
 using NAudio.Wave;
 
-namespace VoiceRecorder
+namespace Recorder
 {
     public class Recording
     {

@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Audio;
 
 using NAudio.Wave;
 
-namespace VoiceRecorder
+namespace Recorder
 {
     public partial class MainPage : PhoneApplicationPage
     {
